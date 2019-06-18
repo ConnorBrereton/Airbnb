@@ -1,0 +1,23 @@
+header {
+    background-color: white;
+    height:70px;
+    width:100%;
+    border-bottom: solid 1px #CCCCCC;
+    box-sizing: border-box;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: 20px 50%;
+}
+
+header div {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #CCCCCC;
+    float: right;
+    margin: 15px 30px 15px 0;
+}
+
+.available {
+    background-color: #FF545F;
+}

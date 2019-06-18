@@ -1,0 +1,118 @@
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    min-height: 100%;
+}
+
+.filters {
+    height: 70px;
+    width:  100%;
+    background-color: white;
+    border: solid 1px #dddddd;
+    border-radius: 4px;
+/*    padding: 10px;*/
+    box-sizing: border-box;
+}
+
+button {
+    height: 48px;
+    width: 20%;
+    background-color: #ff545f;
+    border:0;
+    border-radius: 4px;
+    float: right;
+    margin: 11px 30px;
+    font-size: 18px;
+    color: white;
+}
+
+button:hover, button:focus {
+    background: rgba(255, 84, 95, 0.9);
+}
+
+.locations, .amenities {
+    height: 100%;
+    width: 25%;
+/*    margin-top: -10px;*/
+    padding-left: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+.locations {
+    border-right: solid 1px #dddddd;
+}
+
+h2, h3, h4 {
+    margin: 0;
+    padding: 12px 0 0 10px;
+}
+
+.locations h3, .amenities h3 {
+    font-weight: 600;
+}
+
+.locations h4, .amenities h4 {
+    padding-top: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.popover {
+    width: 100.5%;
+    padding: 15px 0 30px 20px;
+    background-color: #fafafa;
+    border: solid 1px #dddddd;
+    border-radius: 4px;
+    z-index: 4;
+    float: left;
+    position: absolute;
+    top: 68px;
+    left: -0.5px;
+    display: none;
+    overflow: auto;
+    max-height: 300px;
+    list-style-type: none;
+}
+
+.popover.small-list {
+    padding: 20px 0px  30px 40px;
+    line-height: 30px;
+    list-style-type: none;
+}
+
+.popover h2 {
+    padding-bottom: 2px;
+}
+
+.popover ul {
+    padding: 0px 0px 10px 20px;
+    line-height: 25px;
+    list-style-type: none;
+}
+
+.locations:hover .popover {
+    display: block;
+}
+
+.amenities:hover .popover {
+    display: block;
+}
+
+input[type=checkbox] {
+    margin-right: 10px;
+    position: relative;
+    float: left;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?{{cache_id}}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?{{cache_id}}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?{{cache_id}}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?{{cache_id}}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/8-places.css?{{cache_id}}" />
+    <link rel="icon" type="image/png" href="../static/images/icon.png?{{cache_id}}" />
+    <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../static/scripts/100-hbnb.js?{{cache_id}}"></SCRIPT>
+    <title>AirBnB clone</title>
+  </head>
+  <body>
+    <header>
+      <div id="api_status"></div>
+    </header>
+    <div class="container">
+      <section class="filters">
+	<div class="locations">
+	  <h3>States</h3>
+	  <h4>&nbsp;</h4>
+	  <ul class="popover states">
+	      {% for state in result|sort(attribute='name') %}
+                 <LI><INPUT type="checkbox" data-id="{{ state.id }}" data-name="{{ state.name }}">
+		   <h2>{{ state.name }}</h2>
+                   <UL class="small_list cities">
+		     {% for city in state.cities|sort(attribute='name') %}
+                     <LI><INPUT type="checkbox" data-id="{{ city.id }}" data-name="{{ city.name }}">
+		       {{ city.name }}</LI>
+		     {% endfor %}
+                   </UL>
+                 </LI>
+	       {% endfor %}
+	  </ul>
+	</div><!-- end locations, used for display-inline
+		--><div class="amenities">
+	  <h3>Amenities</h3>
+	  <h4>&nbsp;</h4>
+	  <ul class="popover small-list">
+	      {% for a in amenities|sort(attribute='name') %}
+	        <li><INPUT type="checkbox" data-id="{{ a.id }}" data-name="{{ a.name }}">
+		  {{ a.name }}</li>
+	      {% endfor %}
+	  </ul>
+	</div> <!-- end amenities -->
+	<button>Search</button>
+      </section> <!-- end filters -->
+      <section class="places">
+	<h1>Places</h1>
+      </section> <!-- end places -->
+    </div> <!-- end container -->
+    <footer>
+      Holberton School
+    </footer>
+  </body>
+</html>

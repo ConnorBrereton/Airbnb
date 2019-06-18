@@ -1,0 +1,16 @@
+* {
+    margin:0;
+    padding:0;
+    color:#484848;
+    font-size:14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body {
+    padding-bottom: 60px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
